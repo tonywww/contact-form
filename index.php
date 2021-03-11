@@ -29,7 +29,7 @@ if (!empty($_SESSION['_contact_form_success'])) {
     <title>Contact Us</title>
 
     <!-- reCAPTCHA Javascript -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
 </head>
 <body>
 <div class="container">
