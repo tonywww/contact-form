@@ -81,11 +81,16 @@ try {
     $mail->addReplyTo($_POST['email'], $_POST['name']);
 
     // Content
-    $mail->Subject = "[Contact Form] ".$_POST['subject'];
+    $subject = "=?UTF-8?B?".base64_encode($_POST['subject'])."?=";
+    $mail->Subject = "[Contact Form] ".$subject;
+//    $mail->Subject = "[Contact Form] ".$_POST['subject'];
     $mail->Body    = <<<EOT
+This message is from contact form on {$_SERVER['SERVER_NAME']}.
+
 Name: {$_POST['name']}
 Email: {$_POST['email']}
 
+Content:
 -------------------------------
 {$_POST['message']}
 EOT;
