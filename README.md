@@ -23,7 +23,7 @@ To be able to send messages with this contact form, you'll need a working SMTP s
 
 To prevent spammers from being able to abuse your contact form, reCAPTCHA has been integrated by default. reCAPTCHA is a free service from Google which can prevent automated scripts from using your form.
 
-This contact form has been integrated with reCAPTCHA v2 with the Checkbox challenge. To use this, you will need to setup your site in reCAPTCHA like so:
+This contact form has been integrated with reCAPTCHA v2 invisible. To use this, you will need to setup your site in reCAPTCHA like so:
 
 1. Go to the reCAPTCHA admin console: https://www.google.com/recaptcha/admin/create
 2. Enter a label you can use to identify your website.
