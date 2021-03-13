@@ -30,14 +30,6 @@ if (!empty($_SESSION['_contact_form_success'])) {
 
     <!-- reCAPTCHA Javascript -->
     <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
-
-    <!-- reCAPTCHA v2 invisible -->
-    <script>
-      function onSubmit(token) {
-        document.getElementById("contact-form").submit();
-      }
-    </script>
-
 </head>
 <body>
 <div class="container">
@@ -65,7 +57,7 @@ if (!empty($_SESSION['_contact_form_success'])) {
                     }
                     ?>
 
-                    <form id='contact-form' method="post" action="submit.php">
+                    <form method="post" action="submit.php">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" name="name" id="name" class="form-control">
@@ -83,18 +75,14 @@ if (!empty($_SESSION['_contact_form_success'])) {
 
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea name="message" id="message" class="form-control" rows="10"></textarea>
+                            <textarea name="message" id="message" class="form-control" rows="12"></textarea>
                         </div>
 
-<!--  recaptcha v2 checkbox  -->
-<!--                        <div class="form-group text-center">
-<!--                            <div class="g-recaptcha" data-sitekey="<?= CONTACTFORM_RECAPTCHA_SITE_KEY ?>"></div>
-<!--                        </div>
-<!--                        <button class="btn btn-primary btn-block">Send Message</button>  -->
+                        <div class="form-group text-center">
+                            <div class="g-recaptcha" data-sitekey="<?= CONTACTFORM_RECAPTCHA_SITE_KEY ?>"></div>
+                        </div>
 
-<!--  recaptcha v2 invisible  -->
-                        <button class="g-recaptcha btn btn-primary btn-block" data-sitekey="<?= CONTACTFORM_RECAPTCHA_SITE_KEY ?>" data-callback='onSubmit'>Send Message</button>
-
+                        <button class="btn btn-primary btn-block">Send Message</button>
                     </form>
                 </div>
             </div>
